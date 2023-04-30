@@ -1,0 +1,37 @@
+// reset.scss
+
+// Remove default margin and padding
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+// Set box-sizing to border-box to include padding in element's width and height
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Set a base font size and line-height
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+// Remove list styles
+ul,
+ol {
+  list-style: none;
+}
+
+// Remove text decoration from links
+a {
+  text-decoration: none;
+}
