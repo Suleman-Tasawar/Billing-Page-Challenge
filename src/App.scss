@@ -4,11 +4,21 @@ $color-red: ee4d38;
 
 #root {
   font-family: "Poppins", sans-serif;
+  font-size: 13px;
+}
+
+.billingPage{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .leftRedBlock {
   position: absolute;
-  left: 0;
+  top: 5%;
+  left: 5%;
   width: 200px;
   height: 100vh;
   background-color: #ee4d38;
@@ -16,16 +26,18 @@ $color-red: ee4d38;
 }
 
 .userDashboard {
+  height: 850px;
   position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  border-radius: 1rem;
 }
 
 .userProfilePannel {
   background-color: #f8f8ff;
   width: 260px;
-  height: 100vh;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -56,6 +68,9 @@ $color-red: ee4d38;
   }
 }
 /*Typography*/
+p{
+  color: #cbcbd9;
+}
 .userProfile {
   .userProfile {
     display: flex;
@@ -111,20 +126,37 @@ $color-red: ee4d38;
     height: 35px;
   }
 }
+table{
+  tr,
+  td{
+    text-align: center;
+    padding: 1.3rem;
+  }
 
-tr,
-td {
-  text-align: center;
-  padding: 1rem;
 }
 
-.cardInfo {
+.downloadButton{
+  width: 100px;
+  height: 30px;
+  border: 1px solid rgb(156, 155, 155);
+  background-color: #fafafa;
+}
+.cardInfo{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 390px;
 
-  div > span > img {
-    width: 80px;
-    height: 80px;
+  div > div > img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card{
+    display: flex;
+  }
+
+  .card > div:nth-of-type(2){
+    padding-top: 1.3rem;
   }
 }

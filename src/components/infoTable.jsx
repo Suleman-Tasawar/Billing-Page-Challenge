@@ -25,24 +25,30 @@ function Table() {
   const userDataTable = userData.map((data) => (
     // eslint-disable-next-line react/jsx-key
     <table>
-      <thead>
-        <th>Date</th>
-        <th>Type</th>
-        <th>Reciept</th>
-      </thead>
       <tbody>
         <tr key={data.id}>
           <td>{data.date}</td>
           <td>{data.type}</td>
           <td>
-            <button>Print Reciept</button>
+            <button className="downloadButton">Print Reciept</button>
           </td>
         </tr>
       </tbody>
     </table>
   ));
 
-  return <div className="tableData">{userDataTable}</div>;
+  return (
+    <div className="tableData">
+      <table>
+        <thead>
+          <td>Date</td>
+          <td>Type</td>
+          <td>Reciept</td>
+        </thead>
+      </table>
+      {userDataTable}
+    </div>
+  );
 }
 
 export default Table;

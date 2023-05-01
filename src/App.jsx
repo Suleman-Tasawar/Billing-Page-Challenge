@@ -36,7 +36,7 @@ function App() {
                 <h1>Billing</h1>
               </div>
               <div className="pageInfo">
-                <h2>Order History</h2>
+                <h3>Order History</h3>
                 <p>Manage billing information and view receips</p>
               </div>
               <div>
@@ -56,14 +56,14 @@ function App() {
             <h1>Payment Method</h1>
             <p>Manage billing information and view receipts</p>
             <div className="cardInfo">
-              <div>
-                <span>
+              <div className="card">
+                <div>
                   <img src="./Images/visa-img.jpg" alt="Visa Card" />
-                </span>
-                <span>Visa ending in 2055</span>
+                </div>
+                <div>Visa ending in 2055</div>
               </div>
               <div>
-                <button className="visaCardButton">Remove</button>
+                <button className="downloadButton">Remove</button>
               </div>
             </div>
           </div>
