@@ -30,17 +30,42 @@ function App() {
           </div>
         </div>
         <div className="userInfoPannel">
-          <div className="pageTitle">
-            <h1>Billing</h1>
-          </div>
+          <div>
+            <div>
+              <div className="pageTitle">
+                <h1>Billing</h1>
+              </div>
+              <div className="pageInfo">
+                <h2>Order History</h2>
+                <p>Manage billing information and view receips</p>
+              </div>
+              <div>
+                <Table />
+              </div>
+            </div>
 
-          <div className="pageInfo">
-            <h2>Order History</h2>
-            <p>Manage billing information and view receips</p>
+            <div className="userPlan">
+              <p>Your Plan</p>
+              <h3>Pro Annual</h3>
+              <p>Review on Nov.2021</p>
+              <button>Cancel Subscription</button>
+            </div>
           </div>
 
           <div>
-            <Table />
+            <h1>Payment Method</h1>
+            <p>Manage billing information and view receipts</p>
+            <div className="cardInfo">
+              <div>
+                <span>
+                  <img src="./Images/visa-img.jpg" alt="Visa Card" />
+                </span>
+                <span>Visa ending in 2055</span>
+              </div>
+              <div>
+                <button className="visaCardButton">Remove</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

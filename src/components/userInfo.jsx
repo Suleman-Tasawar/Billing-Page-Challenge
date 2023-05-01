@@ -2,7 +2,7 @@ function User() {
   return (
     <div className="userProfile">
       <div className="userImg">
-        <img src="/public/Images/user.jpg" />
+        <img src="/Images/user.jpg" />
       </div>
       <div className="userInfo">
         <div>
