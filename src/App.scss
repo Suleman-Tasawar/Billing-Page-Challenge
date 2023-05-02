@@ -1,70 +1,86 @@
 @import "Normalize";
 
-$color-red: ee4d38;
+//Global Colors
+$colorRed: #ee4d38;
+$colorBluishWhite:#e4e4ee;
+$colorDarkWhite:#f8f8ff;
+$colorFullWhite:#fafafa;
+$colorGrey:rgb(156, 155, 155);
+$fontPoppins:"Poppins", sans-serif;
+
+//Mixins for layout
+
+@mixin alignCenter(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin alignEvenly(){
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
 #root {
-  font-family: "Poppins", sans-serif;
+  background-color: $colorBluishWhite;
+  font-family: $fontPoppins;
   font-size: 13px;
 }
 
 .billingPage{
-  height: 100vh;
-  display: flex;
+  position: relative;
+  @include alignCenter();
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .leftRedBlock {
   position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 200px;
-  height: 100vh;
-  background-color: #ee4d38;
+  left: 7%;
+  width: 260px;
+  height: 700px;
+  background-color: $colorRed;
   border-radius: 15px;
 }
 
 .userDashboard {
-  height: 850px;
+  margin-top: 2rem;
+  background-color: $colorFullWhite;
+  z-index: 3;
+  height: 700px;
+  width: 960px;
   position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  @include alignEvenly();
   border-radius: 1rem;
 }
 
 .userProfilePannel {
-  background-color: #f8f8ff;
-  width: 260px;
-  height: 600px;
-  display: flex;
+  background-color: $colorDarkWhite;
+  width: 200px;
+  height: 890px;
+  @include alignEvenly();
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 .userInfoPannel > div:nth-of-type(1) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include alignCenter();
 }
 
 .userPlan {
   text-align: center;
   width: 260px;
   height: 221px;
-  background-color: #ee4d38;
-  color: #f8f8ff;
+  background-color: $colorRed;
+  color: $colorDarkWhite;
   line-height: 2.3;
   border-radius: 16px;
 
   button {
     width: 195px;
     height: 40px;
-    color: #f8f8ff;
-    background-color: #ee4d38;
-    border: 1px solid #f8f8ff;
+    color: $colorDarkWhite;
+    background-color: $colorRed;
+    border: 1px solid $colorDarkWhite;
   }
 }
 /*Typography*/
@@ -73,9 +89,7 @@ p{
 }
 .userProfile {
   .userProfile {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include alignEvenly();
   }
 
   .userInfo > div > h1 {
@@ -88,22 +102,20 @@ p{
   }
   /*Images*/
   .userImg > img {
-    width: 60px;
-    height: 60px;
-    border-radius: 15px;
+    max-width: 60px;
+    max-height: 70px;
+    border-radius: 10px;
   }
 }
 
 .userProfileMenu {
   li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include alignCenter();
     margin: 1rem 0;
   }
 
   li:hover {
-    border-left: 2px solid #ee4d38;
+    border-left: 2px solid $colorRed;
   }
 
   li > div > img {
@@ -115,9 +127,7 @@ p{
 
 .userLogout {
   li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include alignCenter();
     list-style: none;
   }
 
@@ -138,13 +148,11 @@ table{
 .downloadButton{
   width: 100px;
   height: 30px;
-  border: 1px solid rgb(156, 155, 155);
-  background-color: #fafafa;
+  border: 1px solid $colorGrey;
+  background-color: $colorFullWhite;
 }
 .cardInfo{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include alignEvenly();
   width: 390px;
 
   div > div > img {
