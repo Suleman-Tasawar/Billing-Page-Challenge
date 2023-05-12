@@ -47,7 +47,7 @@ $fontPoppins:"Poppins", sans-serif;
   margin-top: 2rem;
   background-color: $colorFullWhite;
   z-index: 3;
-  height: auto;
+  height: 100%;
   width: 960px;
   position: relative;
   @include alignEvenly();
@@ -192,13 +192,14 @@ table{
   }
 
   .userProfilePannel {
-    display: none;
+    
     position: sticky;
     top: 0;
     left: 0;
     background-color: $colorRed;
-    width: 200px;
+    width: 300px;
     height: 100vh;
+    border-radius: 5px;
   }
 
   .userInfoPannel > div:nth-of-type(1) {

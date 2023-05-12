@@ -58,7 +58,7 @@ function App() {
             <div className="cardInfo">
               <div className="card">
                 <div>
-                  <img src="./Images/visa-img.jpg" alt="Visa Card" />
+                  <img src="./Images/visa-img.png" alt="Visa Card" />
                 </div>
                 <div>Visa ending in 2055</div>
               </div>

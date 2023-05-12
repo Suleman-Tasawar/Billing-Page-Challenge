@@ -23,7 +23,7 @@ function Menu() {
           </li>
           <li>
             <div>
-              <img src="/Images/bil.png" alt="Billing" />
+              <img src="/Images/bill.png" alt="Billing" />
             </div>
             <div>Billing</div>
           </li>
